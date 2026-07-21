@@ -732,24 +732,30 @@
         <div class="pipe-src"><div class="src-sweep"></div><span class="pipe-src-icon">🔗</span><div><div class="pipe-src-text">In-Plant Logistics</div><div class="pipe-src-sub">Connectivity · Constraints</div></div></div>
         <div class="pipe-src"><div class="src-sweep"></div><span class="pipe-src-icon">📋</span><div><div class="pipe-src-text">Regulatory Data</div><div class="pipe-src-sub">GMP · HACCP · ICH Q8</div></div></div>
         <div class="pipe-src"><div class="src-sweep"></div><span class="pipe-src-icon">🔧</span><div><div class="pipe-src-text">Maintenance CMMS</div><div class="pipe-src-sub">Schedules · Alerts</div></div></div>
+        <div class="pipe-src"><div class="src-sweep"></div><span class="pipe-src-icon">📅</span><div><div class="pipe-src-text">APS</div><div class="pipe-src-sub">Scheduling · Production Plans</div></div></div>
+        <div class="pipe-src"><div class="src-sweep"></div><span class="pipe-src-icon">🚛</span><div><div class="pipe-src-text">ERP</div><div class="pipe-src-sub">Supplier · Delivery Plans</div></div></div>
       </div>
 
-      <!-- Connector: Sources → KG (fan) -->
+      <!-- Connector: Sources → KG (fan, 7 sources) -->
       <div class="pipe-conn">
-        <svg width="55" height="318" viewBox="0 0 55 318" overflow="visible">
-          <!-- tracks -->
-          <path d="M 0,27 Q 28,27 55,159"  class="conn-track"/>
-          <path d="M 0,90 Q 28,90 55,159"  class="conn-track"/>
-          <path d="M 0,159 L 55,159"        class="conn-track"/>
-          <path d="M 0,228 Q 28,228 55,159" class="conn-track"/>
-          <path d="M 0,291 Q 28,291 55,159" class="conn-track"/>
+        <svg width="55" height="432" viewBox="0 0 55 432" overflow="visible">
+          <!-- tracks (fan to y=216 centre) -->
+          <path d="M 0,27  Q 28,27  55,216" class="conn-track"/>
+          <path d="M 0,90  Q 28,90  55,216" class="conn-track"/>
+          <path d="M 0,153 Q 28,153 55,216" class="conn-track"/>
+          <path d="M 0,216 L 55,216"         class="conn-track"/>
+          <path d="M 0,279 Q 28,279 55,216" class="conn-track"/>
+          <path d="M 0,342 Q 28,342 55,216" class="conn-track"/>
+          <path d="M 0,405 Q 28,405 55,216" class="conn-track"/>
           <!-- hidden motion paths -->
-          <path id="fp0" d="M 0,27 Q 28,27 55,159"  stroke="none" fill="none"/>
-          <path id="fp1" d="M 0,90 Q 28,90 55,159"  stroke="none" fill="none"/>
-          <path id="fp2" d="M 0,159 L 55,159"        stroke="none" fill="none"/>
-          <path id="fp3" d="M 0,228 Q 28,228 55,159" stroke="none" fill="none"/>
-          <path id="fp4" d="M 0,291 Q 28,291 55,159" stroke="none" fill="none"/>
-          <!-- animated dots -->
+          <path id="fp0" d="M 0,27  Q 28,27  55,216" stroke="none" fill="none"/>
+          <path id="fp1" d="M 0,90  Q 28,90  55,216" stroke="none" fill="none"/>
+          <path id="fp2" d="M 0,153 Q 28,153 55,216" stroke="none" fill="none"/>
+          <path id="fp3" d="M 0,216 L 55,216"         stroke="none" fill="none"/>
+          <path id="fp4" d="M 0,279 Q 28,279 55,216" stroke="none" fill="none"/>
+          <path id="fp5" d="M 0,342 Q 28,342 55,216" stroke="none" fill="none"/>
+          <path id="fp6" d="M 0,405 Q 28,405 55,216" stroke="none" fill="none"/>
+          <!-- animated dots — 5 existing sources -->
           <circle r="2.8" fill="#ef476f"><animateMotion dur="1.6s" repeatCount="indefinite" begin="0s"><mpath href="#fp0"/></animateMotion></circle>
           <circle r="1.8" fill="#ef476f" opacity="0.4"><animateMotion dur="1.6s" repeatCount="indefinite" begin="-0.85s"><mpath href="#fp0"/></animateMotion></circle>
           <circle r="2.8" fill="#4f9cf9"><animateMotion dur="1.5s" repeatCount="indefinite" begin="-0.3s"><mpath href="#fp1"/></animateMotion></circle>
@@ -760,6 +766,12 @@
           <circle r="1.8" fill="#a855f7" opacity="0.4"><animateMotion dur="1.5s" repeatCount="indefinite" begin="-0.95s"><mpath href="#fp3"/></animateMotion></circle>
           <circle r="2.8" fill="#06d6a0"><animateMotion dur="1.6s" repeatCount="indefinite" begin="-1.1s"><mpath href="#fp4"/></animateMotion></circle>
           <circle r="1.8" fill="#06d6a0" opacity="0.4"><animateMotion dur="1.6s" repeatCount="indefinite" begin="-0.5s"><mpath href="#fp4"/></animateMotion></circle>
+          <!-- animated dots — APS (fp5, cyan) -->
+          <circle r="2.8" fill="#00d4ff"><animateMotion dur="1.55s" repeatCount="indefinite" begin="-0.4s"><mpath href="#fp5"/></animateMotion></circle>
+          <circle r="1.8" fill="#00d4ff" opacity="0.4"><animateMotion dur="1.55s" repeatCount="indefinite" begin="-1.15s"><mpath href="#fp5"/></animateMotion></circle>
+          <!-- animated dots — ERP Supplier (fp6, gold) -->
+          <circle r="2.8" fill="#ffd166"><animateMotion dur="1.65s" repeatCount="indefinite" begin="-0.75s"><mpath href="#fp6"/></animateMotion></circle>
+          <circle r="1.8" fill="#ffd166" opacity="0.4"><animateMotion dur="1.65s" repeatCount="indefinite" begin="-0.2s"><mpath href="#fp6"/></animateMotion></circle>
         </svg>
         <div class="conn-lbl">Ingest</div>
       </div>
